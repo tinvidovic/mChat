@@ -16,9 +16,13 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    background = White,
+    primary = PuckerUp,
+    onPrimary = White,
+    secondary = CottonBall,
+    onSecondary = Citadel,
+    tertiary = FuchsiaFelicity,
+    outline = LoveFumes
 )
 
 @Composable
