@@ -11,10 +11,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.nticoding.mchat.data.ConversationDatabase
+import com.nticoding.mchat.presentation.chat.ChatScreen
 import com.nticoding.mchat.presentation.components.TextEntryBox
 import com.nticoding.mchat.presentation.components.UserInput
 import com.nticoding.mchat.ui.theme.MChatTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +29,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+
+                    ChatScreen()
                 }
             }
         }
