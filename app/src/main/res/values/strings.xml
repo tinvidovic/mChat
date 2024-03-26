@@ -2,4 +2,5 @@
     <string name="app_name">mChat</string>
 
     <string name="message_seen_cd">Seen</string>
+    <string name="send_cd">Send</string>
 </resources>
