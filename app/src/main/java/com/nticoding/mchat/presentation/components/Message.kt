@@ -85,7 +85,7 @@ fun Message(
 
 /* PREVIEWS */
 private val previewMessage = Message(
-    authorId = UUID.randomUUID(),
+    authorId = 0,
     content = "This is a preview message.\nPreview me!",
     timestamp = System.currentTimeMillis()
 )

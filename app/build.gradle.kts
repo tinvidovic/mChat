@@ -1,9 +1,9 @@
-import org.apache.tools.ant.Project
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -78,4 +78,17 @@ dependencies {
     implementation(Compose.composeUiToolingPreview)
     implementation(Compose.composeViewModel)
     debugImplementation(Compose.composeUiTooling)
+
+    // Room DB
+    "kapt"(Room.roomCompiler)
+    implementation(Room.roomKtx)
+    implementation(Room.roomRuntime)
+
+    // Dagger-Hilt
+    implementation(DaggerHilt.hiltAndroid)
+    kapt(DaggerHilt.hiltCompiler)
+    implementation(DaggerHilt.hiltNavigationCompose)
+
+    // Coroutines
+    implementation(Coroutines.coroutines)
 }

@@ -9,7 +9,7 @@ import java.util.UUID
 * @property timestamp Message sent timestamp in millis from epoch
 */
 data class Message(
-    val authorId: UUID,
+    val authorId: Int,
     val content: String,
     val timestamp: Long,
 )
