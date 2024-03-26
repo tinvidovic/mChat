@@ -2,6 +2,8 @@ package com.nticoding.mchat.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+const val DisabledAlpha: Float = 0.4F
+
 val White = Color(0xFFFFFFFF)
 val CottonBall = Color(0xFFF0F5FA)
 val Citadel = Color(0xFF6D7B88)

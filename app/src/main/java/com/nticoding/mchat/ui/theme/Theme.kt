@@ -17,6 +17,7 @@ import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
     background = White,
+    onBackground = Citadel,
     primary = PuckerUp,
     onPrimary = White,
     secondary = CottonBall,
@@ -32,7 +33,6 @@ fun MChatTheme(
     content: @Composable () -> Unit
 ) {
     val colorScheme = LightColorScheme
-    val typography = Typography
 
     val view = LocalView.current
     if (!view.isInEditMode) {

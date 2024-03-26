@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.nticoding.mchat.R
+import com.nticoding.mchat.ui.theme.DisabledAlpha
 import com.nticoding.mchat.ui.theme.FuchsiaFelicity
 import com.nticoding.mchat.ui.theme.LoveFumes
 import com.nticoding.mchat.ui.theme.MChatTheme
@@ -28,11 +29,9 @@ fun SendButton(
     enabled: Boolean = true
 ) {
 
-    val disabledAlpha = 0.4F
-
     val topGradientColor =
-        if (enabled) FuchsiaFelicity else FuchsiaFelicity.copy(alpha = disabledAlpha)
-    val bottomGradientColor = if (enabled) LoveFumes else LoveFumes.copy(alpha = disabledAlpha)
+        if (enabled) FuchsiaFelicity else FuchsiaFelicity.copy(alpha = DisabledAlpha)
+    val bottomGradientColor = if (enabled) LoveFumes else LoveFumes.copy(alpha = DisabledAlpha)
 
     IconButton(
         onClick = onClick, modifier = modifier
