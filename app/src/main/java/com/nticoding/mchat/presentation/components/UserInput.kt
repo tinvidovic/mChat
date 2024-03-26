@@ -25,6 +25,7 @@ fun UserInput(
     modifier: Modifier = Modifier,
     textStyle: TextStyle = MaterialTheme.typography.displayMedium,
     maxLines: Int = 6,
+    buttonEnabled: Boolean = true,
 ) {
 
     Row(
@@ -49,7 +50,7 @@ fun UserInput(
 
         SendButton(
             onClick = onSend,
-            enabled = value.isNotEmpty(),
+            enabled = buttonEnabled,
             modifier = Modifier.padding(
                 horizontal = 8.dp
             )
@@ -67,7 +68,8 @@ fun UserInputPreview() {
         UserInput(
             value = text,
             onValueChange = { text = it },
-            onSend = { text = "" }
+            onSend = { text = "" },
+            buttonEnabled = text.isNotEmpty()
         )
     }
 }
