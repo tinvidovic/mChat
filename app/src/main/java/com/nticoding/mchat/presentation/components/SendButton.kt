@@ -44,10 +44,9 @@ fun SendButton(
                         bottomGradientColor,
                     )
                 )
-            )
-            .alpha(
-                if (enabled) 1F else disabledAlpha
-            ), enabled = enabled, colors = IconButtonDefaults.iconButtonColors(
+            ),
+            enabled = enabled,
+            colors = IconButtonDefaults.iconButtonColors(
             containerColor = Color.Transparent
         )
     ) {
