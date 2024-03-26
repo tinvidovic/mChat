@@ -22,7 +22,8 @@ private val LightColorScheme = lightColorScheme(
     secondary = CottonBall,
     onSecondary = Citadel,
     tertiary = FuchsiaFelicity,
-    outline = LoveFumes
+    outline = LoveFumes,
+    outlineVariant = Citadel
 )
 
 @Composable
@@ -31,6 +32,7 @@ fun MChatTheme(
     content: @Composable () -> Unit
 ) {
     val colorScheme = LightColorScheme
+    val typography = Typography
 
     val view = LocalView.current
     if (!view.isInEditMode) {
