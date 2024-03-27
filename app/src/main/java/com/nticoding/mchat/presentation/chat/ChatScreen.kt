@@ -13,17 +13,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.nticoding.mchat.R
 import com.nticoding.mchat.domain.model.Conversation
-import com.nticoding.mchat.domain.model.Message
 import com.nticoding.mchat.presentation.chat.ChatUtil.shouldShowSection
 import com.nticoding.mchat.presentation.chat.ChatUtil.shouldShowTail
-import com.nticoding.mchat.presentation.chat.Constants.HOURS_FOR_SECTION
-import com.nticoding.mchat.presentation.chat.Constants.SECONDS_FOR_TAIL
 import com.nticoding.mchat.presentation.components.ConversationHeader
 import com.nticoding.mchat.presentation.components.ConversationSection
 import com.nticoding.mchat.presentation.components.Message
 import com.nticoding.mchat.presentation.components.UserInput
-import com.nticoding.mchat.util.TimeUnitsUtil.MILLIS_IN_HOUR
-import com.nticoding.mchat.util.TimeUnitsUtil.MILLIS_IN_SECOND
 
 @Composable
 fun ChatScreen(
