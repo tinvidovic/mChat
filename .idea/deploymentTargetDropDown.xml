@@ -2,7 +2,19 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="ChatScreenTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="conversationSectionsExist()">
+        <State />
+      </entry>
+      <entry key="conversationSectionsExist() (1)">
+        <State />
+      </entry>
+      <entry key="sendMessageButtonEnabledMessageExists()">
         <State />
       </entry>
     </value>

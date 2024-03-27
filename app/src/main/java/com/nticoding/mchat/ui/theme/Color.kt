@@ -2,10 +2,13 @@ package com.nticoding.mchat.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+const val DisabledAlpha: Float = 0.4F
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val White = Color(0xFFFFFFFF)
+val CottonBall = Color(0xFFF0F5FA)
+val Quicksilver = Color(0xFFA4A6A5)
+val Citadel = Color(0xFF6D7B88)
+
+val PuckerUp = Color(0xFFFF0F78)
+val LoveFumes = Color(0xFFFCCED9)
+val FuchsiaFelicity = Color(0xFFFA4772)

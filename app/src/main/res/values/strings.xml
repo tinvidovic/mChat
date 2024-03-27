@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">mChat</string>
+
+    <string name="message_seen_cd">Seen.</string>
+    <string name="send_cd">Send.</string>
+    <string name="profile_picture_cd">Profile picture.</string>
+    <string name="back_arrow_cd">Navigate back.</string>
+    <string name="meatball_menu_cd">More.</string>
 </resources>
