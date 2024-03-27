@@ -6,15 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.nticoding.mchat.data.ConversationDatabase
+import com.nticoding.mchat.domain.model.Conversation
 import com.nticoding.mchat.presentation.chat.ChatScreen
-import com.nticoding.mchat.presentation.components.TextEntryBox
-import com.nticoding.mchat.presentation.components.UserInput
 import com.nticoding.mchat.ui.theme.MChatTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -30,7 +24,14 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
 
-                    ChatScreen()
+                    // NOTE: In a real app these would likely be passed as navigation arguments
+                    // hardcoded here for simplicity
+                    ChatScreen(
+                        Conversation(
+                            0,
+                            "Sarah"
+                        )
+                    )
                 }
             }
         }

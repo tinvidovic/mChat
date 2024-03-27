@@ -20,9 +20,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.nticoding.mchat.R
-import com.nticoding.mchat.domain.Message
+import com.nticoding.mchat.domain.model.Message
 import com.nticoding.mchat.ui.theme.MChatTheme
-import java.util.UUID
 
 /**
  * A Composable of a single Message
@@ -64,7 +63,9 @@ fun Message(
             Text(
                 text = messageContent,
                 style = MaterialTheme.typography.bodyMedium,
-                color = if (currentUserMessage) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSecondary
+                color = if (currentUserMessage) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSecondary,
+                modifier = Modifier
+                    .padding(end = 8.dp)
             )
 
             if (seen) {

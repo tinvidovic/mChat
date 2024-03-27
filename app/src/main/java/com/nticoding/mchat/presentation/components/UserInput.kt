@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -28,34 +29,42 @@ fun UserInput(
     buttonEnabled: Boolean = true,
 ) {
 
-    Row(
+    Surface(
+        shadowElevation = 8.dp,
         modifier = modifier
-            .fillMaxWidth()
-            .padding(
-                vertical = 8.dp
-            ),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
     ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    vertical = 8.dp
+                ),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
 
-        TextEntryBox(
-            value = value,
-            onValueChange = onValueChange,
-            textStyle = textStyle,
-            maxLines = maxLines,
-            modifier = Modifier.padding(
-                horizontal = 8.dp
-            ).weight(1F)
-        )
-
-        SendButton(
-            onClick = onSend,
-            enabled = buttonEnabled,
-            modifier = Modifier.padding(
-                horizontal = 8.dp
+            TextEntryBox(
+                value = value,
+                onValueChange = onValueChange,
+                textStyle = textStyle,
+                maxLines = maxLines,
+                modifier = Modifier
+                    .padding(
+                        horizontal = 8.dp
+                    )
+                    .weight(1F)
             )
-        )
+
+            SendButton(
+                onClick = onSend,
+                enabled = buttonEnabled,
+                modifier = Modifier.padding(
+                    horizontal = 8.dp
+                )
+            )
+        }
     }
+
 }
 
 @Preview
