@@ -54,7 +54,7 @@ fun EmptyTextEntryBoxPreview() {
     MChatTheme {
         TextEntryBox(
             text,
-            {text = it}
+            { text = it }
         )
     }
 }
@@ -68,7 +68,7 @@ fun TextEntryBoxPreview() {
     MChatTheme {
         TextEntryBox(
             text,
-            {text = it}
+            { text = it }
         )
     }
 }

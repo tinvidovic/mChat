@@ -10,7 +10,7 @@ import com.nticoding.mchat.data.entity.MessageEntity
     version = 1,
     exportSchema = false
 )
-abstract class ConversationDatabase: RoomDatabase() {
+abstract class ConversationDatabase : RoomDatabase() {
 
     abstract val dao: ConversationDao
 }

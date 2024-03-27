@@ -104,6 +104,7 @@ fun CurrentUserMessagePreview() {
         )
     }
 }
+
 @Preview
 @Composable
 fun CurrentUserTailedMessagePreview() {
