@@ -8,7 +8,6 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -44,8 +43,8 @@ fun SendButton(
                     )
                 )
             ),
-            enabled = enabled,
-            colors = IconButtonDefaults.iconButtonColors(
+        enabled = enabled,
+        colors = IconButtonDefaults.iconButtonColors(
             containerColor = Color.Transparent
         )
     ) {

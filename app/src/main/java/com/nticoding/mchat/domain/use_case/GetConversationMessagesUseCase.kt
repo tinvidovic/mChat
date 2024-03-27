@@ -18,8 +18,9 @@ class GetConversationMessagesUseCase(
         conversationId: Int,
     ): Flow<List<Message>> = channelFlow {
 
-        conversationRepository.getMessagesForConversation(conversationId).collectLatest { messages ->
-            send(messages)
-        }
+        conversationRepository.getMessagesForConversation(conversationId)
+            .collectLatest { messages ->
+                send(messages)
+            }
     }
 }

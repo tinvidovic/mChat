@@ -43,7 +43,7 @@ fun ChatScreen(
             pictureSize = 48.dp,
             name = "Sarah",
             onBackClick = { },
-            onMoreClick = {viewModel.getRandomResponse() },
+            onMoreClick = { viewModel.getRandomResponse() },
             modifier = Modifier
                 .fillMaxWidth()
         )
@@ -91,7 +91,11 @@ fun ChatScreen(
                 }
 
                 // Add section for first item (reverse layout, so added after message item)
-                if (index == state.messages.size - 1 || shouldShowSection(message, state.messages[index + 1])) {
+                if (index == state.messages.size - 1 || shouldShowSection(
+                        message,
+                        state.messages[index + 1]
+                    )
+                ) {
                     item {
                         ConversationSection(
                             timestamp = message.timestamp,

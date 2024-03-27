@@ -29,7 +29,7 @@ fun ConversationSection(
     timeStyle: TextStyle = MaterialTheme.typography.labelMedium.copy(
         color = Quicksilver
     )
-){
+) {
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.Center
