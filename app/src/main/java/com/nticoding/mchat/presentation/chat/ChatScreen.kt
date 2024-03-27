@@ -14,6 +14,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.nticoding.mchat.R
 import com.nticoding.mchat.domain.model.Conversation
 import com.nticoding.mchat.domain.model.Message
+import com.nticoding.mchat.presentation.chat.ChatUtil.shouldShowSection
+import com.nticoding.mchat.presentation.chat.ChatUtil.shouldShowTail
 import com.nticoding.mchat.presentation.chat.Constants.HOURS_FOR_SECTION
 import com.nticoding.mchat.presentation.chat.Constants.SECONDS_FOR_TAIL
 import com.nticoding.mchat.presentation.components.ConversationHeader
@@ -26,11 +28,10 @@ import com.nticoding.mchat.util.TimeUnitsUtil.MILLIS_IN_SECOND
 @Composable
 fun ChatScreen(
     conversation: Conversation,
-) {
-
-    val viewModel = hiltViewModel<ChatViewModel, ChatViewModel.ChatViewModelFactory> { factory ->
+    viewModel: ChatViewModel = hiltViewModel<ChatViewModel, ChatViewModel.ChatViewModelFactory> { factory ->
         factory.create(conversation.id)
     }
+) {
 
     val state = viewModel.state
 
@@ -113,35 +114,6 @@ fun ChatScreen(
                 .padding(top = 8.dp)
         )
     }
-}
-
-/**
- * Returns true if a [ConversationSection] should be shown before the current message
- * A section is shown if it is the first message in a conversation or if the previous message was
- * sent more than [HOURS_FOR_SECTION] hour ago
- */
-private fun shouldShowSection(message: Message, previousMessage: Message?): Boolean {
-
-    if (previousMessage == null)
-        return true
-
-    return (message.timestamp - previousMessage.timestamp) > MILLIS_IN_HOUR * HOURS_FOR_SECTION
-}
-
-/**
- * Returns true if a [Message] should have a tail
- * A tail is shown if it is the last message in a conversation , if the next message was sent more
- * than [SECONDS_FOR_TAIL] seconds ago or if the next message was sent by another user
- */
-private fun shouldShowTail(message: Message, nextMessage: Message?): Boolean {
-
-    if (nextMessage == null)
-        return true
-
-    if (message.authorId != nextMessage.authorId)
-        return true
-
-    return (nextMessage.timestamp - message.timestamp) > MILLIS_IN_SECOND * SECONDS_FOR_TAIL
 }
 
 object Constants {
