@@ -8,6 +8,15 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="conversationSectionsExist()">
+        <State />
+      </entry>
+      <entry key="conversationSectionsExist() (1)">
+        <State />
+      </entry>
+      <entry key="sendMessageButtonEnabledMessageExists()">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

@@ -16,7 +16,7 @@ android {
         versionCode = ProjectConfig.versionCode
         versionName = ProjectConfig.versionName
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.nticoding.mchat.presentation.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -90,4 +90,26 @@ dependencies {
 
     // Coroutines
     implementation(Coroutines.coroutines)
+
+    // Memory Management
+    debugImplementation(MemoryManagement.leakCanary)
+
+    // Testing
+    testImplementation(Testing.junit4)
+    testImplementation(Testing.junitAndroidExt)
+    testImplementation(Testing.coroutines)
+    testImplementation(Testing.truth)
+    testImplementation(Testing.composeUiTest)
+    testImplementation(Testing.hiltTesting)
+    testImplementation(Testing.testRunner)
+
+    androidTestImplementation(Testing.junit4)
+    androidTestImplementation(Testing.junitAndroidExt)
+    androidTestImplementation(Testing.coroutines)
+    androidTestImplementation(Testing.truth)
+    androidTestImplementation(Testing.composeUiTest)
+    androidTestImplementation(Testing.hiltTesting)
+    androidTestImplementation(Testing.testRunner)
+    kaptAndroidTest(DaggerHilt.hiltCompiler)
+
 }

@@ -57,7 +57,6 @@ class ChatViewModel @AssistedInject constructor(
             }
         }
     }
-
     init {
         // Only load messages if not already bundled
         if (state.messages.isEmpty()) {
@@ -66,7 +65,6 @@ class ChatViewModel @AssistedInject constructor(
     }
 
     private fun loadMessages() {
-
         viewModelScope.launch {
             getConversationMessagesUseCase.invoke(0).collectLatest {
                 state = state.copy(
