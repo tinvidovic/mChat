@@ -48,9 +48,7 @@ fun ProfilePicture(
 
 @Preview
 @Composable
-fun ProfilePicturePreview(
-    modifier: Modifier = Modifier
-) {
+fun ProfilePicturePreview() {
 
     MChatTheme {
         ProfilePicture(
