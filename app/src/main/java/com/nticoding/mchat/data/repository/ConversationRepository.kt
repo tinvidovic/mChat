@@ -2,6 +2,7 @@ package com.nticoding.mchat.data.repository
 
 import com.nticoding.mchat.data.ConversationDao
 import com.nticoding.mchat.data.entity.MessageEntity
+import com.nticoding.mchat.domain.mapper.toMessage
 import com.nticoding.mchat.domain.model.Message
 import com.nticoding.mchat.domain.repository.ConversationRepository
 import kotlinx.coroutines.flow.Flow
@@ -26,11 +27,7 @@ class ConversationRepository(
         return dao.getMessagesForConversation(conversationId)
             .map { messageEntities ->
                 messageEntities.map {
-                    Message(
-                        authorId = it.authorId,
-                        content = it.content,
-                        timestamp = it.timestamp
-                    )
+                    it.toMessage()
                 }
             }
     }
