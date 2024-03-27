@@ -53,7 +53,7 @@ fun ConversationHeader(
     ) {
         Row(
             modifier = Modifier
-                .padding(horizontal = 8.dp, vertical = 8.dp),
+                .padding(horizontal = 16.dp, vertical = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -67,7 +67,7 @@ fun ConversationHeader(
                     contentDescription = stringResource(id = R.string.back_arrow_cd),
                     tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier
-                        .size(pictureSize)
+                        .size(pictureSize * 0.8F)
                         .clickable { onBackClick() }
                 )
 

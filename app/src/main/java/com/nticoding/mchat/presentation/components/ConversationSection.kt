@@ -2,16 +2,16 @@ package com.nticoding.mchat.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import com.nticoding.mchat.ui.theme.Citadel
-import com.nticoding.mchat.ui.theme.CottonBall
 import com.nticoding.mchat.ui.theme.MChatTheme
+import com.nticoding.mchat.ui.theme.Quicksilver
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -27,12 +27,12 @@ fun ConversationSection(
         color = Citadel
     ),
     timeStyle: TextStyle = MaterialTheme.typography.labelMedium.copy(
-        color = CottonBall
+        color = Quicksilver
     )
 ){
     Row(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
+        horizontalArrangement = Arrangement.Center
     ) {
 
         Text(
@@ -68,6 +68,10 @@ private fun getTimeFromTimestamp(timestamp: Long): String {
 fun ConversationSectionPreview() {
 
     MChatTheme {
-        ConversationSection(timestamp = System.currentTimeMillis())
+        ConversationSection(
+            timestamp = System.currentTimeMillis(),
+            modifier = Modifier
+                .fillMaxWidth()
+        )
     }
 }

@@ -18,7 +18,7 @@ interface ConversationDao {
             SELECT * 
             FROM messages
             WHERE conversation_id = :conversationId
-            ORDER BY timestamp ASC
+            ORDER BY timestamp DESC
         """
     )
     fun getMessagesForConversation(conversationId: Int): Flow<List<MessageEntity>>

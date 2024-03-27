@@ -2,7 +2,7 @@ package com.nticoding.mchat.data.repository
 
 import com.nticoding.mchat.data.ConversationDao
 import com.nticoding.mchat.data.entity.MessageEntity
-import com.nticoding.mchat.domain.Message
+import com.nticoding.mchat.domain.model.Message
 import com.nticoding.mchat.domain.repository.ConversationRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

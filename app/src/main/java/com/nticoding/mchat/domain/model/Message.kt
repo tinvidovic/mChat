@@ -1,5 +1,6 @@
-package com.nticoding.mchat.domain
+package com.nticoding.mchat.domain.model
 
+import java.io.Serializable
 import java.util.UUID
 
 /**
@@ -12,4 +13,4 @@ data class Message(
     val authorId: Int,
     val content: String,
     val timestamp: Long,
-)
+): Serializable

@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.nticoding.mchat.domain.model.Conversation
+import com.nticoding.mchat.presentation.chat.ChatScreen
 import com.nticoding.mchat.ui.theme.MChatTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +23,15 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+
+                    // NOTE: In a real app these would likely be passed as navigation arguments
+                    // hardcoded here for simplicity
+                    ChatScreen(
+                        Conversation(
+                            0,
+                            "Sarah"
+                        )
+                    )
                 }
             }
         }
